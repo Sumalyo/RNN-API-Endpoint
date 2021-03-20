@@ -7,9 +7,11 @@ pip install -r requirements.txt
 ``
 ## Running
 Run this from a venv on the terminal
+
 ``
 uvicorn main:app
 ``
+Then go to http://127.0.0.1:8000/ and enter a word (of any length) in the form and hit enter
 ## Screenshots
 From http://127.0.0.1:8000/
 ![The UI](https://ibin.co/5vbpk1mXPiTH.jpg)
