@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Titan One' rel='stylesheet'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <title>AI a bit</title>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">I complete you..</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Developed</a></li>
+        <li><a href="#">By</a></li>
+        <li><a href="https://github.com/Sumalyo">Sumalyo</a></li>
+      </ul>
+      <button class="btn btn-danger navbar-btn">with ❤️</button>
+    </div>
+  </nav>
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="titles"><h1>Complete Your Sentences</h1></div>
+    
+      <div class="jumbotron bg-cover text-white" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%),url(https://placeimg.com/1000/480/tech) ">
+          <div class="container">
+          <h1 class="display-4" style="color: white;">Hello, user!</h1>
+          <p class="lead" style="color: white;">This app generates random text with AI for a given Input</p>
+          <hr class="my-4">
+          <p style="color: white;">It is trained on classical text!! Get ready to be surprised!!</p>
+          <p style="color: white;">All of this runs on the machine...even the API...so try and keep it short!!</p>
+          <a class="btn btn-primary btn-lg" href="#" role="button">Get Started</a>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="col-md-6">
+        <div class="titles">
+          <h2>Enter Some text</h2>
+          <p>Keep it short!!</p>
+        </div>
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" id="input-text" placeholder="Enter word">
+              <small id="userHelp" class="form-text text-muted">We'll see what comes.</small>
+            </div>
+           <button type="button" class="btn btn-primary" onclick="submitQwer()">Submit</button>
+          </form>
+          
+        </div>
+
+  </div>
+</div>
+<script>
+  function submitQwer()
+  {
+    var inputdata = document.getElementById("input-text").value;
+    var endpoint = "sentence/"+inputdata;
+    console.log(endpoint);
+    
+    $.ajax({
+      type: 'GET',
+      url:endpoint,
+      success: function(data){
+      swal(data.para);
+      }
+
+    });
+  
+  }
+</script>
+
+     
+
+</body>
+</html>
