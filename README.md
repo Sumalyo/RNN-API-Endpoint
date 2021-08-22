@@ -14,6 +14,5 @@ uvicorn main:app
 Then go to http://127.0.0.1:8000/ and enter a word (of any length) in the form and hit enter
 ## Screenshots
 From http://127.0.0.1:8000/
-![The UI](https://ibin.co/5vbpk1mXPiTH.jpg)
+![The UI](https://github.com/Sumalyo/RNN-API-Endpoint/blob/main/RNN-API-SS.png)
 
-![enter image description here](https://ibin.co/5vbqTvKxqLF9.jpg)
